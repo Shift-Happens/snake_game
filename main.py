@@ -38,7 +38,10 @@ def drawGrid(w, rows, surface):
     pass
 
 def redrawWindow(surface):
-    pass
+    global rows, width
+    win.fill((0, 0, 0))
+    drawGrid(surface)
+    pygame.display.update()
 
 def randomSnack(rows, item):
     pass
@@ -47,6 +50,7 @@ def message_box(subject, content):
     pass
 
 def main():
+    global width, rows
     width = 500 
     height = 500
     rows = 20
@@ -58,7 +62,7 @@ def main():
     while flag:
         pygame.time.delay(50)
         clock.tick(10)
-        
+
         redrawWindow(win)
 
     pass
